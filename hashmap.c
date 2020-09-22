@@ -57,8 +57,11 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
-
-    return NULL;
+  printf("%s","inicializando la tabla...\n");
+  HashMap * map = (HashMap *)malloc(sizeof(HashMap));
+  map->buckets = (Pair **) calloc (10,sizeof(Pair *));
+  map->capacity = 10;
+  return NULL;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
