@@ -87,9 +87,12 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 void * searchMap(HashMap * map,  char * key) {   
-
-
-    return NULL;
+  long position;
+  position =(hash(key,map->capacity));
+  void* output;
+  output =(void*)calloc(1,sizeof(void));
+  output =(map->buckets[position]);
+  return output;
 }
 
 void * firstMap(HashMap * map) {
