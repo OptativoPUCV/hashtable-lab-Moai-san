@@ -92,6 +92,7 @@ void * searchMap(HashMap * map,  char * key) {
   void* output;
   output =(void*)calloc(1,sizeof(void));
   output =(map->buckets[position]->value);
+  map->current =(position);
   return output;
 }
 
