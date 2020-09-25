@@ -94,12 +94,17 @@ void * searchMap(HashMap * map,  char * key) {
   long position;
   position =(hash(key,map->capacity));
   printf ("%ld",position);
+  long count =0;
   while ((strcmp(key,map->buckets[position]->key))!=0)
   {
     position =(position+1);
     if (position>=(map->capacity))
     {
       position =(position-(map->capacity));
+    }
+    if (count>=map->capacity)
+    {
+      return NULL;
     }
   }
   void* output;
