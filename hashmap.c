@@ -67,11 +67,11 @@ void insertMap(HashMap * map, char * key, void * value)
 
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
-  Pair** a =(Pair**)calloc(map->capacity,sizeof(Pair*));
   map->capacity =((map->capacity)*2);  
+  Pair** a =(Pair**)calloc(map->capacity,sizeof(Pair*));
   a =map->buckets;
-  a =((Pair**)realloc(a,(2*sizeof(a))));
-  //map->buckets =a;
+  //a =((Pair**)realloc(a,(2*sizeof(a))));
+  map->buckets =a;
   //map->buckets = (Pair**)realloc(map->buckets,((map->capacity)*(sizeof(Pair*))));
 }
 
