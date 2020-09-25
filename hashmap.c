@@ -67,13 +67,15 @@ void insertMap(HashMap * map, char * key, void * value)
 
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
+  Pair** a =(Pair**)calloc(map->capacity,sizeof(Pair*));
   map->capacity =((map->capacity)*2);  
-  map->buckets = (Pair **) realloc (map->buckets,((map->capacity)*(sizeof(Pair *))));
+  a =map->buckets;
+  a =(Pair**)realloc(a,((map->capacity)*(sizeof(Pair*))));
+  //map->buckets = (Pair**)realloc(map->buckets,((map->capacity)*(sizeof(Pair*))));
 }
 
 
 HashMap * createMap(long capacity) {
-  //printf("%s","inicializando la tabla...\n");
   HashMap * map = (HashMap *)malloc(sizeof(HashMap));
   map->buckets = (Pair **) calloc (capacity,sizeof(Pair *));
   map->capacity = capacity;
