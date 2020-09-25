@@ -105,6 +105,7 @@ void * searchMap(HashMap * map,  char * key) {
     if (count>=map->capacity)
     {
       return NULL;
+      break;
     }
   }
   void* output;
