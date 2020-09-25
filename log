@@ -194,3 +194,9 @@ Fri Sep 25 06:42:09 UTC 2020:
  1 file changed, 8 insertions(+), 1 deletion(-)
  tests:  0|0
 0b2076c
+Fri Sep 25 06:47:07 UTC 2020: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|4
+total_score: 30/70
+205daad
