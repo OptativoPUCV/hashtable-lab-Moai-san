@@ -151,3 +151,9 @@ Fri Sep 25 06:11:54 UTC 2020:
  tests:  5|4
 total_score: 30/70
 dd6dac0
+Fri Sep 25 06:13:41 UTC 2020: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|4
+total_score: 30/70
+bd0828b

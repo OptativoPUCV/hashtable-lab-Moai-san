@@ -91,7 +91,7 @@ void * searchMap(HashMap * map,  char * key) {
   position =(hash(key,map->capacity));
   void* output;
   output =(void*)calloc(1,sizeof(void));
-  output =(map->buckets[position]);
+  output =(map->buckets[position]->value);
   return output;
 }
 
