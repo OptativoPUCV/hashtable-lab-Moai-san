@@ -87,7 +87,7 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 void * searchMap(HashMap * map,  char * key) {   
-  if (map->capacity==0)
+  /*if (map->capacity==0)
   {
     return NULL;
   }
@@ -113,7 +113,8 @@ void * searchMap(HashMap * map,  char * key) {
   output =(void*)calloc(1,sizeof(void));
   output =(map->buckets[position]->value);
   map->current =(position);
-  return (output);
+  return (output);*/
+  return NULL;
 }
 
 void * firstMap(HashMap * map) {
