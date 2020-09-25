@@ -70,7 +70,7 @@ void enlarge(HashMap * map) {
   Pair** a =(Pair**)calloc(map->capacity,sizeof(Pair*));
   map->capacity =((map->capacity)*2);  
   a =map->buckets;
-  a =((Pair**)realloc(a,2*sizeof(a)));
+  a =((Pair**)realloc(a,(2*sizeof(a))));
   map->buckets =a;
   //map->buckets = (Pair**)realloc(map->buckets,((map->capacity)*(sizeof(Pair*))));
 }
