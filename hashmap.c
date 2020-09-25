@@ -65,7 +65,7 @@ void insertMap(HashMap * map, char * key, void * value)
   }
 }
 
-void insertRehashed(Pair** NewBuckets, HashMap * map, int i)
+void insertRehashed(Pair** NewBuckets, HashMap * map, long i)
 {
   long position;
   char key[8];
@@ -91,10 +91,14 @@ void enlarge(HashMap * map) {
   map->capacity =((map->capacity)*2);  
   Pair** pivot;
   pivot =(Pair**)calloc(map->capacity,sizeof(Pair*));
-  for (int i =(0);i<((map->capacity)/2);i =(i+1))
+  for (long i =(0);i<((map->capacity)/2);i =(i+1))
   {
     insertRehashed(pivot,map,i);
   }
+  map->buckets =(Pair**)calloc(map->capacity,sizeof(Pair*));
+  map->buckets =(pivot);
+  pivot =NULL;
+  free(pivot);
 }
 
 
