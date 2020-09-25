@@ -107,6 +107,7 @@ void * searchMap(HashMap * map,  char * key) {
       return NULL;
       break;
     }
+    count++;
   }
   void* output;
   output =(void*)calloc(1,sizeof(void));
