@@ -90,7 +90,7 @@ void * searchMap(HashMap * map,  char * key) {
   long position;
   position =(hash(key,map->capacity));
   printf ("%ld",position);
-  if (map->capacity==-1)
+  if (map->capacity==0)
   {
     return NULL;
   }
