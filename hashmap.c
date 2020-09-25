@@ -99,7 +99,7 @@ void * searchMap(HashMap * map,  char * key) {
       position =(position-(map->capacity));
     }
     aux =(aux-1);
-    if (aux==(1))
+    if (aux==(position-4))
     {
       return (NULL);
     }
