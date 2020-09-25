@@ -87,6 +87,10 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 void * searchMap(HashMap * map,  char * key) {   
+  if (map==NULL)
+  {
+    return NULL;
+  }
   long position;
   position =(hash(key,map->capacity));
   printf ("%ld",position);
