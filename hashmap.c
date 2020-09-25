@@ -87,7 +87,7 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 void * searchMap(HashMap * map,  char * key) {   
-  if (map==NULL)
+  if (map->buckets==NULL)
   {
     return NULL;
   }
