@@ -65,10 +65,36 @@ void insertMap(HashMap * map, char * key, void * value)
   }
 }
 
+void insertRehashed(Pair** NewBuckets, HashMap * map, int i)
+{
+  long position;
+  char key[8];
+  void* value;
+  value =(void*)calloc(1,sizeof(void));
+  strcpy(key,map->buckets[i]->key);
+  value =map->buckets[i]->value;
+  Pair* a =(createPair(key,value));
+  position = hash(key,map->capacity);
+  /*while (map->buckets[position]!=NULL)
+  {
+    position =(position+1);
+    if (position>=(map->capacity))
+    {
+      position =(position-(map->capacity));
+    }
+  }*/
+  NewBuckets[position] =(a);
+}
+
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
   map->capacity =((map->capacity)*2);  
-  map->buckets = (Pair**)realloc(&map->buckets,((map->capacity)*(sizeof(Pair*))));
+  Pair** pivot;
+  pivot =(Pair**)calloc(map->capacity,sizeof(Pair*));
+  for (int i =(0);i<((map->capacity)/2);i =(i+1))
+  {
+    insertRehashed(pivot,map,i);
+  }
 }
 
 
