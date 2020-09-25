@@ -90,10 +90,10 @@ void * searchMap(HashMap * map,  char * key) {
   if (map->capacity==0)
   {
     return NULL;
-  }  
+  }
   long position;
   position =(hash(key,map->capacity));
-  printf ("%ld",position);
+  printf ("Holi%ld",position);
   long count =0;
   while ((strcmp(key,map->buckets[position]->key))!=0)
   {
