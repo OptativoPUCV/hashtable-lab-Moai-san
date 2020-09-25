@@ -89,10 +89,14 @@ void eraseMap(HashMap * map,  char * key) {
 void * searchMap(HashMap * map,  char * key) {   
   long position;
   position =(hash(key,map->capacity));
-  if (position>=(map->capacity))
+  while (map->buckets[position]->key!=key)
+  {
+    position =(position+1);
+    if (position>=(map->capacity))
     {
       position =(position-(map->capacity));
     }
+  }
   void* output;
   output =(void*)calloc(1,sizeof(void));
   output =(map->buckets[position]->value);
