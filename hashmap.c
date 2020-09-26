@@ -76,14 +76,6 @@ void insertRehashed(Pair** NewBuckets, HashMap * map, long i)
   value =map->buckets[i]->value;
   Pair* a =(createPair(key,value));
   position = hash(key,map->capacity);
-  /*while (map->buckets[position]!=NULL)
-  {
-    position =(position+1);
-    if (position>=(map->capacity))
-    {
-      position =(position-(map->capacity));
-    }
-  }*/
   NewBuckets[position] =(a);
 }
 
