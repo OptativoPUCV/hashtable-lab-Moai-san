@@ -174,7 +174,7 @@ void * firstMap(HashMap * map) {
 }
 
 void * nextMap(HashMap * map) {
-  if (map==NULL)
+  if (map->buckets==NULL)
   {
     return NULL;
   }
