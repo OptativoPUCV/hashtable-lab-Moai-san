@@ -178,7 +178,7 @@ void * nextMap(HashMap * map) {
   {
     return NULL;
   }
-  printf("el current inicial es %ld",map->current);
+  printf("el current inicial es %ld",(map->current)+1);
   map->current =((map->current)+1);
   while (1)
   {
@@ -196,6 +196,6 @@ void * nextMap(HashMap * map) {
     }
   }
   printf("la talla de la tabla es %ld",map->capacity);
-  printf("el current final es %ld",map->current);
+  printf("el current final es %ld",(map->current)+1);
   return (map->buckets[map->current]->value);
 }
