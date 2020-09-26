@@ -68,9 +68,9 @@ void insertMap(HashMap * map, char * key, void * value)
 void insertRehashed(Pair** NewBuckets, HashMap * map, long i)
 {
   long position;
-  Pair* b =(createPair((map->buckets[i]->key),(map->buckets[i]->value)));
+  Pair* a =(createPair((map->buckets[i]->key),(map->buckets[i]->value)));
   position = hash(map->buckets[i]->key,map->capacity);
-  NewBuckets[position] =(b);
+  NewBuckets[position] =(a);
 }
 
 void enlarge(HashMap * map) {
