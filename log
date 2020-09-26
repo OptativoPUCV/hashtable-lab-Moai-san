@@ -686,3 +686,9 @@ Sat Sep 26 23:18:24 UTC 2020:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 ac2603b
+Sat Sep 26 23:20:57 UTC 2020: 
+ hashmap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+ tests:  13|2
+total_score: 50/70
+1dff7e7
