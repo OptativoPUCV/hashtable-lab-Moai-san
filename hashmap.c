@@ -88,7 +88,6 @@ void enlarge(HashMap * map) {
   pivot =map->buckets;
   map->buckets =(Pair**)calloc(map->capacity,(sizeof(Pair*)));
   Pair* test;
-  map->size =0;
   for (int i=0;i<map->capacity;i++)
   {
     test =(pivot[i]);
