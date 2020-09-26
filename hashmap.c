@@ -126,11 +126,11 @@ void * searchMap(HashMap * map,  char * key) {
     position =(position+1);
     if (position>=(map->capacity))
     {
-      printf ("te la meti owo%ld\n",position);
       position =(position-(map->capacity));
     }
     if (count>=map->capacity)
     {
+      printf ("te la meti owo%ld\n",position);
       return NULL;
     }
     count++;
