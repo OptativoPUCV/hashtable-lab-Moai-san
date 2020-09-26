@@ -120,7 +120,6 @@ void * searchMap(HashMap * map,  char * key)
   }
   long position;
   position =(hash(key,map->capacity));
-  printf ("Holi%ld",position);
   long count =0;
   while (is_equal(key,map->buckets[position]->key)==0)
   {
@@ -145,9 +144,7 @@ void * searchMap(HashMap * map,  char * key)
     if (count>=(map->capacity)-1)
     {
       return NULL;
-    }
-    printf ("te la meti owo%ld\n",count);
-    
+    }    
   }
   void* output;
   output =(void*)calloc(1,sizeof(void));
