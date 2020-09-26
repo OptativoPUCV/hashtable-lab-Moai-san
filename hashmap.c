@@ -65,7 +65,7 @@ void insertMap(HashMap * map, char * key, void * value)
   }
 }
 
-void insertMapa(HashMap * map, char * key, void * value) 
+void insertReHashed(HashMap * map, char * key, void * value) 
 {
   long position;
   Pair* a =(createPair(key,value));
@@ -93,7 +93,7 @@ void enlarge(HashMap * map) {
     test =(pivot[i]);
     if (test!=NULL)
     {
-      insertMapa(map,test->key,test->value);
+      insertReHashed(map,test->key,test->value);
     }
   }
 }
