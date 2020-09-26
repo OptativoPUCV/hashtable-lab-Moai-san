@@ -128,7 +128,7 @@ void * searchMap(HashMap * map,  char * key) {
     {
       position =(position-(map->capacity));
     }
-    if (count>=map->capacity)
+    if (count>=(map->capacity)-1)
     {
       return NULL;
     }
