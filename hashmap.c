@@ -46,10 +46,6 @@ int is_equal(void* key1, void* key2){
 
 void insertMap(HashMap * map, char * key, void * value) 
 {
-  /*if (key==NULL)
-  {
-    return;
-  }*/
   long position;
   Pair* a =(createPair(key,value));
   position = hash(key,map->capacity);
@@ -76,7 +72,10 @@ void enlarge(HashMap * map) {
   map->buckets =(Pair**)calloc(map->capacity,(sizeof(Pair*)));
   for (int i=0;i<map->capacity;i++)
   {
-    insertMap(map,map->buckets[i]->key,map->buckets[i]->value);
+    if (map->buckets[i]->key!=NULL)
+    {
+      insertMap(map,map->buckets[i]->key,map->buckets[i]->value);
+    }
   }
   free(pivot);
 }
