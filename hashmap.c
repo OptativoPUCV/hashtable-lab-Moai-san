@@ -194,5 +194,6 @@ void * nextMap(HashMap * map) {
       break;
     }
   }
+  printf("%s\n",(char*)map->buckets[map->current]->value);
   return (map->buckets[map->current]->value);
 }
