@@ -123,6 +123,7 @@ void * searchMap(HashMap * map,  char * key) {
   long count =0;
   while (is_equal(key,map->buckets[position]->key)!=1)
   {
+    printf ("te la meti owo%ld\n",position);
     position =(position+1);
     if (position>=(map->capacity))
     {
