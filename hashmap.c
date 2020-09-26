@@ -112,7 +112,8 @@ void eraseMap(HashMap * map,  char * key) {
 
 }
 
-void * searchMap(HashMap * map,  char * key) {   
+void * searchMap(HashMap * map,  char * key)
+{   
   if (map->capacity==0)
   {
     return NULL;
@@ -129,13 +130,14 @@ void * searchMap(HashMap * map,  char * key) {
     {
       if (map->buckets[position]==NULL)
       {
-        count++;
-        position++;
+        count =(count+1);
+        position =(position+1);
       }
       else
       {
         break;
       }
+    }
     if (position>=(map->capacity))
     {
       position =(position-(map->capacity));
@@ -145,14 +147,13 @@ void * searchMap(HashMap * map,  char * key) {
       return NULL;
     }
     printf ("te la meti owo%ld\n",count);
-    }
+    
   }
   void* output;
   output =(void*)calloc(1,sizeof(void));
   output =(map->buckets[position]->value);
   map->current =(position);
   return (output);
-  //return NULL;
 }
 
 void * firstMap(HashMap * map) {
