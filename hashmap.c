@@ -83,7 +83,7 @@ void insertReHashed(HashMap * map, char * key, void * value)
 
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
-  Pair** pivot =(Pair **) calloc (map->capacity,sizeof(Pair *));
+  Pair** pivot;// =(Pair **) calloc (map->capacity,sizeof(Pair *));
   map->capacity =((map->capacity)*2);  
   pivot =map->buckets;
   map->buckets =(Pair**)calloc(map->capacity,(sizeof(Pair*)));
