@@ -78,7 +78,7 @@ void insertMapa(HashMap * map, char * key, void * value)
       position =(position-(map->capacity));
     }
   }
-  printf("%s",(char*)value);
+  printf("%s\n",(char*)value);
   map->buckets[position] =a;
 }
 
