@@ -121,7 +121,7 @@ void * searchMap(HashMap * map,  char * key) {
   position =(hash(key,map->capacity));
   printf ("Holi%ld",position);
   long count =0;
-  while (is_equal(key,map->buckets[position]->key)!=1)
+  while (is_equal(key,map->buckets[position]->key)==0)
   {
     position =(position+1);
     if (position>=(map->capacity))
