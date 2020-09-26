@@ -97,7 +97,6 @@ void enlarge(HashMap * map) {
       insertMapa(map,test->key,test->value);
     }
   }
-  pivot=NULL;
 }
 
 
