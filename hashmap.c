@@ -174,10 +174,6 @@ void * firstMap(HashMap * map) {
 }
 
 void * nextMap(HashMap * map) {
-  if (map==NULL)
-  {
-    return NULL;
-  }
   map->current =((map->current)+1);
   return (map->buckets[map->current]->value);
 }
