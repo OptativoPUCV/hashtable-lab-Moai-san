@@ -88,10 +88,10 @@ void enlarge(HashMap * map) {
   {
     insertRehashed(pivot,map,i);
   }
-  map->buckets =(Pair**)calloc(map->capacity,sizeof(Pair*));
+  map->buckets =(Pair**)calloc(map->capacity,(sizeof(Pair*)));
   map->buckets =(pivot);
   pivot =NULL;
-  //free(pivot);
+  free(pivot);
 }
 
 
