@@ -92,7 +92,7 @@ void enlarge(HashMap * map) {
   for (int i=0;i<(map->capacity)/2;i++)
   {
     test =(pivot[i]);
-    if ((test!=NULL)&&(test->key!=NULL)&&(test->value!=NULL))
+    if ((test!=NULL)&&(test->key!=NULL))
     {
       insertMapa(map,test->key,test->value);
     }
