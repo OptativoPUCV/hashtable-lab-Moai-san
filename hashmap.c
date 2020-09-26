@@ -132,8 +132,8 @@ void * searchMap(HashMap * map,  char * key) {
     {
       return NULL;
     }
-    printf ("te la meti owo%ld\n",count);
     count++;
+    printf ("te la meti owo%ld\n",count);
   }
   void* output;
   output =(void*)calloc(1,sizeof(void));
