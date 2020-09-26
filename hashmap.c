@@ -68,7 +68,6 @@ void insertMap(HashMap * map, char * key, void * value)
 void insertMapa(HashMap * map, char * key, void * value) 
 {
   long position;
-  printf("holaaaaaaaaaaaa\n");
   Pair* a =(createPair(key,value));
   position = hash(key,map->capacity);
   while (map->buckets[position]!=NULL)
@@ -79,6 +78,7 @@ void insertMapa(HashMap * map, char * key, void * value)
       position =(position-(map->capacity));
     }
   }
+  printf("%s",(char*)value);
   map->buckets[position] =a;
 }
 
