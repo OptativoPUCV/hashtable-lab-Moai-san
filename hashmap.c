@@ -67,20 +67,21 @@ void insertMap(HashMap * map, char * key, void * value)
 
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
+  Pair** pivot =(Pair **) calloc (map->capacity,sizeof(Pair *));
   map->capacity =((map->capacity)*2);  
-  Pair** pivot =map->buckets;
+  pivot =map->buckets;
   map->buckets =(Pair**)calloc(map->capacity,(sizeof(Pair*)));
   Pair* test;
   map->size =0;
   for (int i=0;i<map->capacity;i++)
   {
-    test =map->buckets[i];
+    test =(pivot[i]);
     if (test!=NULL)
     {
       insertMap(map,test->key,test->value);
     }
   }
-  free(pivot);
+  pivot=NULL;
 }
 
 
