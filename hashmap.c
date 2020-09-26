@@ -124,6 +124,18 @@ void * searchMap(HashMap * map,  char * key) {
   while (is_equal(key,map->buckets[position]->key)==0)
   {
     position =(position+1);
+    count++;
+    while(1)
+    {
+      if (map->buckets[position]==NULL)
+      {
+        count++;
+        position++;
+      }
+      else
+      {
+        break;
+      }
     if (position>=(map->capacity))
     {
       position =(position-(map->capacity));
@@ -132,8 +144,8 @@ void * searchMap(HashMap * map,  char * key) {
     {
       return NULL;
     }
-    count++;
     printf ("te la meti owo%ld\n",count);
+    }
   }
   void* output;
   output =(void*)calloc(1,sizeof(void));
