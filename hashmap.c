@@ -154,8 +154,8 @@ void * searchMap(HashMap * map,  char * key)
 }
 
 void * firstMap(HashMap * map) {
-
-    return NULL;
+  map->current =(0);
+  return (map->buckets[map->current]->value);
 }
 
 void * nextMap(HashMap * map) {
