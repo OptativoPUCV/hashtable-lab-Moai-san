@@ -76,7 +76,7 @@ void enlarge(HashMap * map) {
     test =map->buckets[i];
     if (test!=NULL)
     {
-      insertMap(map,map->buckets[i]->key,map->buckets[i]->value);
+      insertMap(map,test->key,test->value);
     }
   }
   free(pivot);
