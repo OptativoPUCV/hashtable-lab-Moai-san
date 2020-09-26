@@ -46,6 +46,10 @@ int is_equal(void* key1, void* key2){
 
 void insertMap(HashMap * map, char * key, void * value) 
 {
+  if (key==NULL)
+  {
+    return;
+  }
   long position;
   Pair* a =(createPair(key,value));
   position = hash(key,map->capacity);
