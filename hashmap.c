@@ -175,5 +175,16 @@ void * firstMap(HashMap * map) {
 
 void * nextMap(HashMap * map) {
   map->current =((map->current)+1);
+  while (1)
+  {
+    if ((map->buckets[map->current]==NULL)||(map->buckets[map->current]->key==NULL))
+    {
+      map->current =((map->current)+1);
+    }
+    else
+    {
+      break;
+    }
+  }
   return (map->buckets[map->current]->value);
 }
