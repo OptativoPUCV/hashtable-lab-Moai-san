@@ -69,7 +69,7 @@ void insertRehashed(Pair** NewBuckets, HashMap * map, long i)
 {
   long position;
   Pair* a =(createPair("awa","oa"));
-  position = hash(map->buckets[i]->key,map->capacity);
+  position =(hash(map->buckets[i]->key,map->capacity));
   NewBuckets[position] =(a);
 }
 
