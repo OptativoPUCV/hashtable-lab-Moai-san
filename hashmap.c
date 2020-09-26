@@ -65,6 +65,22 @@ void insertMap(HashMap * map, char * key, void * value)
   }
 }
 
+void insertMapa(HashMap * map, char * key, void * value) 
+{
+  long position;
+  Pair* a =(createPair(key,value));
+  position = hash(key,map->capacity);
+  while (map->buckets[position]!=NULL)
+  {
+    position =(position+1);
+    if (position>=(map->capacity))
+    {
+      position =(position-(map->capacity));
+    }
+  }
+  map->buckets[position] =a;
+}
+
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
   Pair** pivot =(Pair **) calloc (map->capacity,sizeof(Pair *));
@@ -78,7 +94,7 @@ void enlarge(HashMap * map) {
     test =(pivot[i]);
     if (test!=NULL)
     {
-      insertMap(map,test->key,test->value);
+      insertMapa(map,test->key,test->value);
     }
   }
   pivot=NULL;
