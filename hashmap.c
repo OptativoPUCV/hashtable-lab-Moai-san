@@ -109,9 +109,10 @@ HashMap * createMap(long capacity) {
   return map;
 }
 
-void eraseMap(HashMap * map,  char * key) {    
-
-
+void eraseMap(HashMap * map,  char * key)
+{    
+  searchMap(map,key);
+  map->buckets[map->current]->key =NULL;
 }
 
 void * searchMap(HashMap * map,  char * key)
