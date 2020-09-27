@@ -96,10 +96,8 @@ void enlarge(HashMap * map) {
       insertReHashed(map,test->key,test->value);
     }
   }
-  pivot =NULL;
-  free(pivot);
-  test =NULL;
   free(test);
+  free(pivot);
 }
 
 
