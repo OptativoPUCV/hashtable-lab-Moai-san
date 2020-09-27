@@ -112,6 +112,10 @@ HashMap * createMap(long capacity) {
 void eraseMap(HashMap * map,  char * key)
 {    
   searchMap(map,key);
+  if((map->current)==(-1))
+  {
+    return;
+  }
   map->buckets[map->current]->key =NULL;
   map->size =((map->size)-1);
 }
@@ -147,6 +151,7 @@ void * searchMap(HashMap * map,  char * key)
     }
     if (count>=(map->capacity)-1)
     {
+      map->current =(-1);
       return NULL;
     }    
   }
