@@ -139,8 +139,7 @@ void * searchMap(HashMap * map,  char * key)
     }
     if (position>=(map->capacity))
     {
-      map->current =0;
-      return NULL;
+      position =(position-(map->capacity));
     }
     if (count>=(map->capacity)-1)
     {
@@ -185,7 +184,8 @@ void * nextMap(HashMap * map) {
   {
     if (map->current>=map->capacity)
     {
-      map->current =(map->current-map->capacity);
+      map->current =0;
+      return NULL;
     }
     if ((map->buckets[map->current]==NULL)||(map->buckets[map->current]->key==NULL))
     {
